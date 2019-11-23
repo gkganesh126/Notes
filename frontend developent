@@ -1,0 +1,76 @@
+front end development
+html - hypertext markup language
+<html>
+	<head>
+	</head>
+</html>
+
+<head>
+	<title>My web page title</title>
+	<link rel="stylesheet" href="style.css">
+	.. other <meta> tags..
+</head?
+<body>
+	<p>This is a closing tag</p>
+</body>
+singleton:
+<br> new line break
+<img srrc="mypic.jpg" alt="a pic of me">
+<link>
+etc
+
+<p class="slogan" id="slogan">
+class attribute is most commonly used to point style in css
+id attribute most commonly used in javascript
+both can be used in css and javascript
+
+
+<div>
+	..other html elements
+</div>
+div element is normally used as a container for other elements
+it can be used to structure and style part of a layout
+
+Semantic elements
+<form> <header>, <section>
+<div> <span> are not semantic tags
+
+HTML VALIDATION
+https://validator.w3.org/
+or validator extensions in vscode
+Refer w3schools.com
+
+CSS - CASCADING STYLE SHEETS
+defined inside <style> tag or in separate css file
+eg:
+body {
+	background-color: gray;
+	font-size:30px;
+}
+p{
+	color:green;
+}
+css provides absolute and relative units to define a length
+it is expressed by a number value + unit
+Absolute units do not change between different screen sizes
+cm, mm, in, px, pt, pc
+Relative units will change between different screens automatically
+%, em. rem, vw,vh, vmin, vmax
+
+body, p{
+	background-color: gray;
+	font-size:30px;
+}
+body {
+	background-color: rgba(0,0,0,0,4);
+	margin:calc(2em*5em);
+}
+
+CSS ANIMATION
+animation and transition property
+ 
+CSS MEDIA QUERIES:
+it allow you to define specific rulesets for different screen sizes(responsive css)
+min-width: 650px
+
+

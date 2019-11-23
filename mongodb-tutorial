@@ -1,0 +1,115 @@
+mongodb
+
+show dbs
+use groups
+db.groups.find()
+db.groups.dropDatabase()
+show collections
+db.groups.insert({"name":"max"})
+db.groups.drop()
+to insert multiple entries,
+	db.groups.insert (
+	[	
+		
+	{
+		"name":"max"
+	},
+	{
+		"name":"yaz",
+	}
+	]
+)
+
+Querying:
+db.groups.find().pretty()
+db.groups.findOne() -> gives first document
+db.groupss.find(
+	{
+		"Age" : {$gt:"15"}
+	}
+)
+$gt, $lt, $gte, $lte, $ne
+
+Query with AND, OR conditions:
+AND operator(comma) eg:
+db.students.find(
+	{
+	"Firstname":"max", "Age":"10"
+	}
+)
+OR operator eg:
+db.students.find(
+	{
+	$or:[{"Firstname":"mark"}, {"Age":"10"}]
+	}
+)
+
+Combining and and or operator:
+db.students.find(
+{
+	"Firstname":"max", $or: [{"Age":"10"},{"Age":"15"}]
+}
+)
+
+update-set: updates only one first document it finds in the query
+db.students.update(
+{ "_id":ObjectId("asfdhjal") 	},
+{ $set: {"lastname":"masen"}	}
+)
+To update multiple documents,
+db.students.update(
+{ "_id":ObjectId("asfdhjal") 	},
+{ $set: {"lastname":"masen"}	}
+{ multi: true}
+)
+
+To save(another way to update),
+db.students.save (
+{<give the entire modified json>	}
+)
+IF a match is not found to update, it creates a new entry.
+
+To delete all document,
+db.students.remove()
+To delete a document,
+db.students.remove(
+{ "_id":ObjectId("asfdhjal") 	}
+)
+
+Though multiple document matches, to delete only on document,
+db.students.remove(
+{ "Age":"16"	}, 1
+)
+
+Projection - selecting only necessary fields instead of selecting the entire document
+db.students.find(
+{}, {"FirstName":1}
+)
+
+To limit no of entries,
+db.students.find(
+{}, {}
+).limit(3)
+
+To sort entries in ascending order give 1, for descending order give -1,
+db.students.find(
+{}, {}
+).sort({"FirstName":1})
+
+Indexing:
+When we find for a entry in large database, it takes time to finish the job. In this case indexing is useful
+db.posts.ensureIndex({"student_id":1})
+db.posts.find({"Student_id":10000}) becomes faster after indexing
+dont create index for every field. always prefer unique fields
+
+db.posts.dropIndex({"student_id":1})
+
+
+Aggregation:
+operations: sum, min,max
+db.students.aggregate([{$group:{"_id":"$Gender", MyResult: {$sum:1}}}])
+
+
+To backup and restore
+use mongodump and mongorestore cmds.
+
