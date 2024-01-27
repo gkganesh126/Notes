@@ -1,0 +1,29 @@
+How to reassess your chess
+www.chess.com
+New in chess book
+
+horizontal rows in chess board are called ranks
+vertical columns in chess board are called files
+
+symbols are written only for moved position, e.g., c5 for pawn
+B for bishop
+K for king
+Q for queen
+K for knight
+R for rook
+
+Special symbols:
+For capture: Bxc6 means bishop has captured a piece in c6
+For capture by pawn: fxe3
+For taking power in last row by pawn: e8=Q, 
+For cutting a bishop by soldier in last row and getting a knight: exd1=N
+For denoting a check, here e.g., rook makes a check: Ra8+, for queen making a check: Qxc5+
+For check-mate, use #: Rxh4#
+For kingside castling: 0-0
+For queen side castling: 0-0-0
+en-passant: capturing a pawn taking off with an opposite pawn nearby: denoted by gxf6 e.p
+In case both 2 pieces like rook, knight, bishop try to capture a piece, we donate with starting piece: e.g., R3xa6, Check in the following order: files first, rank next.
+In case there are three queens on one side, to identify, Qh4xe1#
+! in moves denote good move 
+
+
