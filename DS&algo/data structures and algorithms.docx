@@ -1,0 +1,112 @@
+Data structures & algorithms
+
+Chitra rajan book
+Narasimha karumanji book
+Cracking the coding interview book
+Ds book in kindle
+Algo book in kindle
+Competitive programmer’s handbook.pdf
+Competitive programming from other sources
+Open source contribution
+Update Notes in github
+Hackerank
+Leetcode/codeforce/codestudio
+Icpc
+
+How to remember studied ds&algo?
+Key strategies:
+Revision:
+Revise regularly whenever time permits & also saturdays & sundays coz., only then you will remember to use it and also for interviews
+Practice coding:
+Solve problems on platforms like LeetCode, HackerRank, or Codeforces to actively implement algorithms and data structures in code, which strengthens your understanding and memory retention. 
+Visualize the process:
+Draw diagrams or use visual aids to understand how data is manipulated within each data structure and how algorithms progress through different steps. 
+Break it down:
+Divide complex algorithms into smaller, manageable sub-steps to grasp the logic behind each part more easily. 
+Understand the use case:
+For each data structure and algorithm, clearly identify the type of problem it is best suited to solve, which helps with choosing the right tool for a given situation. 
+Relate to real-world examples:
+Find analogies or real-life situations that mirror the behavior of a data structure or algorithm to aid memory. 
+Use flashcards:
+Create flashcards with the data structure or algorithm name on one side and its key points or pseudocode on the other for quick review. 
+Teach others:
+Explaining a concept to someone else forces you to articulate your understanding clearly, which can solidify your knowledge. 
+Group similar concepts:
+Identify patterns and similarities between different algorithms to make learning more efficient. 
+Mnemonic devices:
+Create memory aids like acronyms or short phrases to remember key steps or properties of an algorithm. 
+
+
+Murmur3 hash function: 
+Predominantly multiply and rotate
+
+DATA STRUCTURES by Chitra Rajan
+Data type: refers to domain of the values and operations that can be performed on these values.
+Eg:Integer, character, real number, complex number, boolean, string
+There are two types of definitions: Structural defn, Behavioural defn
+Structural definition: Structure of fraction is +/-sign, numerator, denominator
+Behavioral definition: function create_fraction(N,D) is the behaviour
+Implementation of fraction in C:
+Struct fraction {
+  Int Num, denr
+}f;
+Or 
+#define Nr 0
+#define Dr 1
+Typedef  int fraction;
+Fraction f[Nr]=2, f[Dr]=3;
+
+Abstract data types(ADT) : where members of the data type are unknown to the users of the type. Abstraction refers to defining new types and hiding out implementation of those types
+Eg: CRUD operations on fractions
+Advantage of ADT:
+  Isolates application from implementation
+  Supports modular programming
+  Supports encapsulation(binding of data and member functions)
+Pre condition: eg., inserting a stack assumes enough space
+Post condition: effect of inserting eg printing error message if conditions are not satisfied
+
+Data structures: A physical representation of ADT. eg stacks queue tree graph
+Types of data types:
+Set - students of a class
+Linear - queue at ticket counter, jobs in printer queue, computer lan with ring topology
+Hierarchical - family tree, organization chart, files and folders in file system
+network(graph) - road map, communication network
+
+Types of data structures:
+On the basis of type of data - primitive ds(int, char, float), compound(array)
+On the basis of ordering of elements - linear / non linear ds
+
+Algorithms analysis:
+An algorithm is defined as step by step to solve a problem
+Types of algorithms:(DGBDynamoB)
+Divide and conquer
+Greedy algorithm
+Backtracking
+Dynamic programming
+Branch and bound
+
+Divide and conquer: dividing a problem into smaller units and each unit is solved(conquered) independently
+Greedy algo: Imagine 4kg bag to be filled with 2kg almond, 2 kg stone, 10g gold, 100g silver, 2kg paper. Filling it with 10g gold only is greedy and it does not offer optimal solution of maximum profit. This is knapsack problem. 
+ Filling it with 10g gold, 100g silver, 2kg almond 2.11 kg < 4kg is optimal solution. Greedy algo does not offer optimal solution
+ i.e greedy algo offers local optima solution, instead of global optima
+Backtracking: It tries for all possible combinations to obtain solutions but will stop in the intermediate strategies
+ if it can detect it cannot proceed further for yielding solution. eg., keeping n queens in n x n chess 
+ board with constrain no queen are in same row or same column or diagonal. 
+Dynamic programming: Principle of optimality and memoization. ie., outputs of previous steps are used in
+future steps
+Branch and bound: Branch - finding all possible solutions to  a subproblem, bound - ignoring solution if
+the current soln is worse than optimal solution
+
+
+Recursion:
+void Print(int n) {
+	if(n==0) {
+		return 0;
+	}
+	System.out.println(n + “ “);
+	return Print(n-1);
+}
+Each recursive call holds memory of function
+It terminates when the base class is reached
+If we get infinite recursion, the program may run out of memory and gives stack overflow
+Generally iterative solutions are easier and efficient than recursive call because of overhead of memory in each function call

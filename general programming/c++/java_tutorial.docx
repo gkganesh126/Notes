@@ -1,0 +1,303 @@
+﻿To get input,
+Scanner sc = new Scanner(System.in);
+int intData = sc.nextInt(); //to get integer intData
+sc.nextLine(); //to get new line input
+sc.next(); //to get string input
+
+
+break with label, it must be near the loop
+
+== compares two references are equal or not, whereas equals() checks if the values are equal
+
+Classes can be instantiated by new operator, clone or Class.forName/newInstance()
+
+array :- arr.length
+Collections:= entity.size()
+
+List contains ALVS(ArrayList, LinkedList, Vector, Stack)
+ArrayList list = new ArrayList();
+Iterator iter = list.iterator();
+while(iter.hasNext()) {
+    System.out.println(iter.next())
+}
+
+or
+System.out.println();
+for(String element : queue) {
+ System.out.println(element);
+}
+
+Similar to next() and hasNext(), previous() and hasPrevious() are also present
+
+Stack operations: push, peek, pop
+Queue; PriorityQueue, ArrayDeque
+Set: HLT(HashSet, LinkedHashSet, TreeSet)
+HashSet: it uses hash table for storage and the elements stored must be unique.
+LinkedHashSet: It is similar to HashSet, but it maintains insertion order and permits null values.
+SortedSet: alternate of set and the items are sorted.
+TreeSet : It extends SortedSet and access and retrieval times are faster.
+ArrayList:
+    - It is dynamic array but with no limit
+    - It maintains insertion order
+    - Can contain duplicate data.
+    - While removing an item, it is bit slower than LinkedList because a lot of shifting need to occur
+    - Does not support concurrent access.
+    - Generics ArrayList<String> list = new ArrayList<String>();
+    - list.add("abc");
+    - list.set(index, value); => list.set(1, "def");
+    - list.get(1);
+    - To sort ArrayList, Collections.sort(list);
+    - list1.addAll(list2) to add/merge two LinkedHashSet
+    - To reverse a list, Collections.reverse(list);
+    - To remove duplicates in list, Set<String> s = new LinkedHashSet<String>(list);
+LinkedList:
+    - Doubly linked list.
+    - Can contain duplicate data.
+    - maintains insertion order
+    - Does not support concurrent access.
+    - Fast because read and write takes place in O(1)
+    - Supports add(), addFirst(), addLast()
+
+Shallow copy vs deep copy c++:
+    - In shallow copy, the values of object are copied and dynamically created memory locations are shared between two objects whereas
+    in deep copy, dynamic memory locations are created newly and copied using copy constructor
+Shallow copy vs deep copy java:
+    - Similar to above(c++) but the reference is shared in shallow copy
+
+Array vs List:
+    When more access operations happens, it is better to use array(coz it is O(1)). If add/delete operations are happening more, it is
+    better to use list(O(1))
+    
+List vs Set:
+    List stores duplicate data whereas set stores unique data
+    List stores insertion order, set is random
+
+PriorityQueue:
+    Ascending order PriorityQueue and descending order PriorityQueue
+    For custom objects, the class must implement Comparable<ClassName> and override compareTo method
+
+HashMap:
+    for(Map.Entry<Integer,Integer> entrySet : freq.entrySet()) {
+            System.out.println("Frequency of " + entrySet.getKey() + " is " + entrySet.getValue());
+    }
+
+HashMap vs TreeMap:
+    Hashmap can contain one null key whereas TreeMap cannot contain null key
+    HashMap maintains no order whereas TreeMap by default stores in Ascending order
+
+
+str.substring(i, j); returns string in str between i and j-1
+To convert String to char[], str.toCharArray()
+To convert String to Character[], iterate and set, characterArray = str.charAt(i)
+To convert char[] to String, String.valueOf(chArr);
+Character.toLowerCase()
+Character.toUpperCase()
+str1.concat(str2)
+str1.indexOf(str2) != -1 means str2 is present in str1
+
+Permutation of string:
+    Number of levels is same as no. of characters in the string
+    
+To get input,
+Scanner sc = new Scanner(System.in);
+int intData = sc.nextInt(); //to get integer intData
+sc.nextLine(); //to get new line input, newline is the delimiter
+sc.next(); //to get string input, space “ “ is the delimiter
+
+
+break with label, it must be near the loop
+
+== compares two references are equal or not, whereas equals() checks if the values are equal
+
+Classes can be instantiated by new operator, clone or Class.forName/newInstance()
+
+array :- arr.length
+Collections:= entity.size()
+
+List contains ALVS(ArrayList, LinkedList, Vector, Stack)
+ArrayList list = new ArrayList();
+Iterator iter = list.iterator();
+while(iter.hasNext()) {
+    System.out.println(iter.next())
+}
+
+or
+System.out.println();
+for(String element : queue) {
+ System.out.println(element);
+}
+
+Similar to next() and hasNext(), previous() and hasPrevious() are also present
+
+Stack operations: push, peek, pop
+Queue; PriorityQueue, ArrayDeque
+Set: HLT(HashSet, LinkedHashSet, TreeSet)
+HashSet: it uses hash table for storage and the elements stored must be unique.
+LinkedHashSet: It is similar to HashSet, but it maintains insertion order and permits null values.
+SortedSet: alternate of set and the items are sorted.
+TreeSet : It extends SortedSet and access and retrieval times are faster.
+ArrayList:
+    - It is dynamic array but with no limit
+    - It maintains insertion order
+    - Can contain duplicate data.
+    - While removing an item, it is bit slower than LinkedList because a lot of shifting need to occur
+    - Does not support concurrent access.
+    - Generics ArrayList<String> list = new ArrayList<String>();
+    - list.add("abc");
+    - list.set(index, value); => list.set(1, "def");
+    - list.get(1);
+    - To sort ArrayList, Collections.sort(list);
+    - list1.addAll(list2) to add/merge two LinkedHashSet
+    - To reverse a list, Collections.reverse(list);
+    - To remove duplicates in list, Set<String> s = new LinkedHashSet<String>(list);
+LinkedList:
+    - Doubly linked list.
+    - Can contain duplicate data.
+    - maintains insertion order
+    - Does not support concurrent access.
+    - Fast because read and write takes place in O(1)
+    - Supports add(), addFirst(), addLast()
+
+Shallow copy vs deep copy c++:
+    - In shallow copy, the values of object are copied and dynamically created memory locations are shared between two objects whereas
+    in deep copy, dynamic memory locations are created newly and copied using copy constructor
+Shallow copy vs deep copy java:
+    - Similar to above(c++) but the reference is shared in shallow copy
+
+Array vs List:
+    When more access operations happens, it is better to use array(coz it is O(1)). If add/delete operations are happening more, it is
+    better to use list(O(1))
+    
+List vs Set:
+    List stores duplicate data whereas set stores unique data
+    List stores insertion order, set is random
+
+PriorityQueue:
+    Ascending order PriorityQueue and descending order PriorityQueue
+    For custom objects, the class must implement Comparable<ClassName> and override compareTo method
+
+HashMap:
+    for(Map.Entry<Integer,Integer> entrySet : freq.entrySet()) {
+            System.out.println("Frequency of " + entrySet.getKey() + " is " + entrySet.getValue());
+    }
+
+HashMap vs TreeMap:
+    Hashmap can contain one null key whereas TreeMap cannot contain null key
+    HashMap maintains no order whereas TreeMap by default stores in Ascending order
+
+
+str.substring(i, j); returns string in str between i and j-1
+To convert String to char[], str.toCharArray()
+To convert String to Character[], iterate and set, characterArray = str.charAt(i)
+To convert char[] to String, String.valueOf(chArr);
+Character.toLowerCase()
+Character.toUpperCase()
+str1.concat(str2)
+str1.indexOf(str2) != -1 means str2 is present in str1
+
+Permutation of string:
+    Number of levels is same as no. of characters in the string
+    
+try {
+	statements;
+	throw new Exception(“Invalid number”);
+}catch(Exception ex) {
+	System.out.println(ex);
+	ex.printStackTrace();
+}
+
+static blocks gets executed even before main function in a class
+In older versions only static block without main func works but in later versions it throws error
+static arrays should be initialized inside a static block
+
+formula to find day of the week for any date:
+String []DAYS;
+            DAYS = new String[]{"SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"};
+        
+        day += ((month < 3) ? year-- : (year - 2));
+        int dayOfWeek = ((((23 * month) / 9) + day + 4 + (year / 4)) - (year / 100) + (year / 400)) % 7;
+        return DAYS[dayOfWeek];
+
+
+
+Aggregation: means an object containing another object(Has-a relationship)
+
+Compile Time Error is better than Run Time Error. So, java compiler renders compiler time error if you declare the same method having same parameters and only with change in return-type.
+
+Rule: If parent class method is declared protected, the child class’ same method cannot be declared empty.
+Rule: If the superclass method does not declare an exception, subclass overridden method cannot declare the checked exception.
+Exceptions:
+Checked exceptions – checked at compiletime (e.g. IOException, SQLException etc)
+Unchecked exceptions – checked at runtime (e.g. ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException etc)
+Error is irrecoverable e.g. OutOfMemoryError, VirtualMachineError, AssertionError
+
+throw is to throw an exception
+throws is to declare an exceptions
+
+In a class, public void finalize() method is used to perform clean up processing just before object is garbage collected
+
+If the superclass method does not declare an exception
+        ◦ If the superclass method does not declare an exception, subclass overridden method cannot declare the checked exception but it can declare unchecked exception.
+    • If the superclass method declares an exception
+        ◦ If the superclass method declares an exception, subclass overridden method can declare same, subclass exception or no exception but cannot declare parent exception.
+
+
+Super is used to call immediate parent class attributes
+super() calls immediate parent class constructor
+
+instance initializer block : gets called everytime when obj is created
+class Person {
+int data;
+{ data =5; System.out.println(“instance init block invoked: “ + data); }
+static {  System.out.println(“static block invoked: “); }
+}
+public static void main(String []args) {
+	Person p1 = new Person();
+	Person p2 = new Person();
+}
+Output:
+static block invoked
+instance init block invoked: 5
+instance init block invoked: 5
+
+final: 
+final variables cannot be changed
+final methods cannot be overridden but can be inherited
+final class cannot be extended
+Can we initialize blank final variable?
+Yes, but only in constructor
+
+A method is overridden, not the data members, so runtime polymorphism can't be achieved by data members.
+
+Dog d=(Dog)new Animal();  
+    1. //Compiles successfully but ClassCastException is thrown at runtime 
+
+interface has static constants and abstract methods.
+It is used to achieve abstraction and multiple inheritance
+multiple inheritance is not supported in the case of class because of ambiguity. However, it is supported in case of an interface because there is no ambiguity. It is because its implementation is provided by the implementation class.
+Since java 8, interface supports implementation of method through default and static methods only
+An interface can have another interface which is known as a nested interface.
+
+The precision may differ from platform to platform that is why java programming language have provided the strictfp keyword, so that you get same result on every platform.
+
+String:
+String str = "GeeksForGeeks"; 
+char[] ch = str.toCharArray(); 
+
+String str = "GeeksForGeeks"; 
+char[] ch = new char[str.length()]; 
+Character []chr = new Character[str.length()];
+for (int i = 0; i < str.length(); i++) { 
+    ch[i] = str.charAt(i); 
+	chr[i] = str.charAt(i);
+} 
+
+String is non-modifiable inplace whereas StringBuffer and StringBuilder provides inplace modification
+Reverse a string:
+StringBuffer buffer = new StringBuffer(word);
+System.out.println(buffer.reverse().toString()+ " ");
+
+Composition:
+One class holding another class object as its data member is called composition.
+
+
