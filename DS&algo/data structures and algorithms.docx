@@ -9,6 +9,7 @@ Competitive programmer’s handbook.pdf
 Competitive programming from other sources
 Open source contribution
 Update Notes in github
+geeksforgeeks
 Hackerank
 Leetcode/codeforce/codestudio
 Icpc
@@ -110,3 +111,58 @@ Each recursive call holds memory of function
 It terminates when the base class is reached
 If we get infinite recursion, the program may run out of memory and gives stack overflow
 Generally iterative solutions are easier and efficient than recursive call because of overhead of memory in each function call
+
+Time complexity:
+1,
+Log n 	—- for (i=0; i<n; i=i*2)
+N
+Nlogn
+n^2
+Exponential eg., 2^n
+
+Asymptotic upper bound - big O notation:
+f(n) <= cg(n) for n>N
+O(log n) < O(n) < O(nlogn) < O(n^2) < O(n^3) <O(2^n)
+
+Asymptotic lower bound - big omega
+f(n) >=c*g(n), n>N
+
+Asymptotic tight bound, big theta
+C1 * g(n) <= f(n) <= c2*g(n)
+Eg., printing all elements of an arry is theta(n)
+
+Hoare’s logic is used in software testing(not easily understandable)
+
+Graph:
+A graph is a data structure that is a network structure
+Can’t use tree here coz., it has got interconnections in the form of vertex(nodes) and edges(arcs)
+Types of graphs:
+Undirected graphs: edges dont have directions marked
+Directed graphs: edges are directed. Also called as digraph
+Indegree of a vertex in a digraph is no. of edges that are incident on it. Outdegree of a vertex is no of edges that leave the vertex
+Symmetric digraph: A graph where every edge has an edge in reverse direction
+Weighted graph
+Adjacent vertices : Two nodes are said to be adjacent if there is an edge between them
+Path
+Length of path
+Cycle
+A simple cycle is a cycle in which no vertex is repeated
+An acyclic graph is a graph with no cycle
+A strongly connected graph is one in which for every pair of vertices(u, v) there is a path from u to v
+Spanning tree of a graph is a tree where the vertice is the subset of edges of graph the connects all vertices as a tree
+Minimum spanning tree of a graph is its spanning tree in which the sum of the weights of the edges is minimum
+
+Representation of graphs:
+Adjacency matrix
+Adjacency list
+
+Operations on graphs
+Insertion 
+Deletion
+Traversal - bfs, dfs
+
+Breadth first search(bfs):
+ A queue is created fifo, where the neighbours, neighbour’s neightbours are added to the queue
+
+Depth first search(dfs):
+ A stack is created lifo, where one of neighbours, one of neighbour’s neighbours are added
