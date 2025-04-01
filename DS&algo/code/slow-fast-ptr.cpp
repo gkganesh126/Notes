@@ -4,7 +4,7 @@ using namespace std;
 
 struct Node {
     int data;
-    struct Node* next;
+    struct Node * next;
 };
 
 struct Node* insertLinkedList(int d) {
@@ -21,12 +21,6 @@ void traverseLinkedList(struct Node * head) {
     }
     cout<<"\n";
 }
-struct Node * deleteHeadOfLinkedList(struct Node *head) {
-    struct Node * q = head -> next;
-    free(head);
-    return q;
-
-}
 int main() {
     struct Node * head = insertLinkedList(1);
     head -> next = insertLinkedList(2);
@@ -36,9 +30,5 @@ int main() {
     cout<<"Creating linked list: ";
     traverseLinkedList(head);
 
-    cout<<"Deleting head of linked list: ";
-    head = deleteHeadOfLinkedList(head);
-    traverseLinkedList(head);
 
-    
 }
