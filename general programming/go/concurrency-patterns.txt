@@ -1,0 +1,8 @@
+
+Concurrency patterns:
+
+Generator pattern(regular channel)
+Worker pattern(waigroup)
+fan in
+fanout
+
