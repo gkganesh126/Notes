@@ -12,8 +12,15 @@ void inorderTraversal(struct BinaryTreeNode * root) {
     if (!root)
         return;
     inorderTraversal(root->left);
-    cout<<root->data;
+    cout<<root->data<<" ";
     inorderTraversal(root->right);
+}
+void preorderTraversal(struct BinaryTreeNode *root) {
+    if (!root)
+        return;
+    cout<<root->data<<" ";
+    preorderTraversal(root->left);
+    preorderTraversal(root->right);
 }
 int main() {
     struct BinaryTreeNode * node = 
@@ -31,7 +38,11 @@ int main() {
     node->right->left=NULL;
     node->right->right=NULL;
 
+    cout<<"inordertraversal: ";
     inorderTraversal(node);
+
+    cout<<"\npreorderTraversal: ";
+    preorderTraversal(node);
 
     free(node);
     free(node->left);
