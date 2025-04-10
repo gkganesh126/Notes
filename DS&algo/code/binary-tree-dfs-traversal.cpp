@@ -22,6 +22,13 @@ void preorderTraversal(struct BinaryTreeNode *root) {
     preorderTraversal(root->left);
     preorderTraversal(root->right);
 }
+void postorderTraversal(struct BinaryTreeNode *root) {
+    if (!root)
+        return;
+    preorderTraversal(root->left);
+    preorderTraversal(root->right);
+    cout<<root->data<<" ";
+}
 int main() {
     struct BinaryTreeNode * node = 
         (struct BinaryTreeNode*) malloc(sizeof(struct BinaryTreeNode));
@@ -43,6 +50,9 @@ int main() {
 
     cout<<"\npreorderTraversal: ";
     preorderTraversal(node);
+
+    cout<<"\npostorderTraversal: ";
+    postorderTraversal(node);
 
     free(node);
     free(node->left);
